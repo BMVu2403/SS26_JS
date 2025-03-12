@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Khởi tạo mảng số nguyên với 10 phần tử
+      let numbers = [];
+
+      // Sử dụng prompt để nhập giá trị từ người dùng
+      for (let i = 0; i < 10; i++) {
+        let num = parseInt(prompt(`Nhập số nguyên thứ ${i + 1}:`), 10);
+        numbers.push(num);
+      }
+
+      // Lọc và hiển thị các số lớn hơn hoặc bằng 10
+      console.log("Các số lớn hơn hoặc bằng 10:");
+      numbers.forEach((num) => {
+        if (num >= 10) {
+          console.log(num);
+        }
+      });
+    </script>
+  </body>
+</html>

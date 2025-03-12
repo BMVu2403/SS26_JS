@@ -8,4 +8,14 @@ const sayHello = () => {
     console.log("Say hello");
 };
 
-greet ("Nguyễn Văn A",sayHello);
+const readNumber = () => {
+    for(let i=0; i<=10; i++){
+        console.log(i);
+    }
+}
+
+const renderNumber = (callBack) => {
+    callBack();
+};
+
+renderNumber(readNumber);

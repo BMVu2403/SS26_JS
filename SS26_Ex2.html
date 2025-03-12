@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function filterLongStrings(arr) {
+        return arr.filter((str) => str.length > 5);
+      }
+
+      const strings = ["apple", "banana", "cat", "elephant", "dog"];
+      const result = filterLongStrings(strings);
+      console.log(result);
+    </script>
+  </body>
+</html>

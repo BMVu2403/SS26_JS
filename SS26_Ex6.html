@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function isValidDateFormat(dateStr) {
+        // Tách chuỗi thành mảng theo dấu "/"
+        const parts = dateStr.split("/");
+
+        // Kiểm tra có đúng 3 phần (DD/MM/YYYY)
+        if (parts.length !== 3) return false;
+
+        let [day, month, year] = parts;
+
+        // Kiểm tra có đúng độ dài và là số không
+        if (day.length !== 2 || month.length !== 2 || year.length !== 4)
+          return false;
+        if (isNaN(day) || isNaN(month) || isNaN(year)) return false;
+
+        return true; // Hợp lệ nếu qua tất cả kiểm tra
+      }
+
+      function filterDates(arr) {
+        return arr.filter((date) => isValidDateFormat(date));
+      }
+
+      // 🌟 Kiểm tra thử
+      const strings = ["24/03/2006", "18/08/2004", "99/99/9999", "01-01-2000"];
+
+      console.log(filterDates(strings));
+    </script>
+  </body>
+</html>

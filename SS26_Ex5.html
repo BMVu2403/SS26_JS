@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Nhập mảng 10 số nguyên từ người dùng
+      let numbers = [];
+      for (let i = 0; i < 10; i++) {
+        let num = parseInt(prompt(`Nhập số nguyên thứ ${i + 1}:`), 10);
+        numbers.push(num);
+      }
+
+      // Tìm số lớn nhất trong mảng
+      // Math.max() là hàm tìm số lớn nhất trong một danh sách số.
+      // ...numbers (spread operator) dùng để truyền từng phần tử của mảng vào Math.max().
+      let maxNumber = Math.max(...numbers);
+
+      // Tìm vị trí (index) của số lớn nhất
+      // indexOf(value) tìm vị trí đầu tiên xuất hiện của value trong mảng.
+      let maxIndex = numbers.indexOf(maxNumber);
+
+      // Hiển thị kết quả
+      console.log(`Số lớn nhất là: ${maxNumber}`);
+      console.log(`Vị trí của số đó trong mảng: ${maxIndex}`);
+    </script>
+  </body>
+</html>

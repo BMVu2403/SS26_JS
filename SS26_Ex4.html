@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Hàm kiểm tra số nguyên tố
+      function isPrime(num) {
+        if (num < 2) return false; // Số nhỏ hơn 2 không phải số nguyên tố
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+          if (num % i === 0) return false; // Nếu chia hết cho i thì không phải số nguyên tố
+        }
+        return true;
+      }
+
+      // Hàm lọc các số nguyên tố từ mảng
+      function filterPrimeNumbers(arr) {
+        return arr.filter(isPrime);
+      }
+
+      const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      const primeNumbers = filterPrimeNumbers(numbers);
+
+      console.log(primeNumbers);
+    </script>
+  </body>
+</html>
