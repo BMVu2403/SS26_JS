@@ -1,21 +1,21 @@
-const greet = (name) => {
-    console.log(`Hello${name}`);
-
+const greet = (name, callback) => {
     callback();
-}
-
-const sayHello = () => {
+  
+    console.log(`Hello ${name}`);
+  };
+  
+  const sayHello = () => {
     console.log("Say hello");
-};
-
-const readNumber = () => {
-    for(let i=0; i<=10; i++){
-        console.log(i);
+  };
+  
+  const readNumber = () => {
+    for (let i = 0; i <= 10; i++) {
+      console.log(i);
     }
-}
-
-const renderNumber = (callBack) => {
-    callBack();
-};
-
-renderNumber(readNumber);
+  };
+  
+  const renderNumber = (callback) => {
+    callback();
+  };
+  
+  renderNumber(readNumber);
